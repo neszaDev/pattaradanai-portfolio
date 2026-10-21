@@ -68,7 +68,7 @@
       "name": "Archive Navigation",
       "kind": "nav",
       "refersTo": "button-dark",
-      "description": "Quiet mono anchor navigation inside the sticky paper header.",
+      "description": "Quiet mono route navigation inside the sticky paper header.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#about\">About</a><a href=\"#projects\">Projects</a><a href=\"#experience\">Experience</a><a href=\"#contact\">Contact</a></nav>",
       "css": ".ds-nav { display: flex; align-items: center; gap: 32px; } .ds-nav a { color: #5d6873; font: 400 12px/1.4 'IBM Plex Mono', monospace; text-decoration: none; transition: color .2s ease; } .ds-nav a:hover { color: #10161f; } .ds-nav a:focus-visible { outline: 3px solid #1b75a8; outline-offset: 4px; }"
     },

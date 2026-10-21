@@ -7,10 +7,11 @@ import { useState } from "react";
 import { profile } from "@/data/content";
 
 const links = [
-  { label: "About", slug: "about" },
-  { label: "Projects", slug: "projects" },
-  { label: "Experience", slug: "experience" },
-  { label: "Contact", slug: "contact" },
+  { label: "Overview", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/experience" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function SiteHeader() {
@@ -27,7 +28,7 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {links.map((link) => (
-            <Link className={`nav-link ${pathname === `/${link.slug}` ? "nav-link--active" : ""}`} href={`/${link.slug}`} key={link.slug}>
+            <Link className={`nav-link ${pathname === link.href ? "nav-link--active" : ""}`} href={link.href} key={link.href}>
               {link.label}
             </Link>
           ))}
@@ -51,7 +52,7 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-navigation" className="mobile-navigation md:hidden" aria-label="Mobile navigation">
           {links.map((link) => (
-            <Link className={pathname === `/${link.slug}` ? "mobile-navigation__active" : ""} href={`/${link.slug}`} key={link.slug} onClick={() => setOpen(false)}>
+            <Link className={pathname === link.href ? "mobile-navigation__active" : ""} href={link.href} key={link.href} onClick={() => setOpen(false)}>
               {link.label}
             </Link>
           ))}

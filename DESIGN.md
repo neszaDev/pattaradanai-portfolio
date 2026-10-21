@@ -159,7 +159,7 @@ The palette is paper-first and low-noise: dark ink carries hierarchy, cool paper
 
 ## Layout
 
-The page is a single anchored narrative: sticky header, hero, about, projects, experience, skills, workflow, and contact close. The shared shell is centered at a maximum width of `1180px`, with `48px` side gutters on larger screens and `32px` on small screens.
+The portfolio uses a shared sticky shell with five focused static routes: Overview, About, Projects, Experience, and Contact. Each route keeps the same visual language while showing only the content needed for that task. The shared shell is centered at a maximum width of `1180px`, with `48px` side gutters on larger screens and `32px` on small screens.
 
 The desktop composition is intentionally asymmetric. The hero, section headings, about content, skills, and contact use a broad left column with a quieter right rail, typically separated by a generous `10%` column gap. The hero begins with large top breathing room (`clamp(96px, 14vw, 180px)`) and ends in a mono scroll rule. Projects use three equal cards; experience uses a metadata column against a larger narrative column; workflow uses a seven-step rule strip.
 
@@ -202,7 +202,7 @@ The form language is editorial and squared: buttons, cards, menu controls, and l
 
 ### Navigation
 
-- **Desktop:** sticky translucent paper header with a mono `PP / 26` brand mark, quiet anchor links, and a dark resume button.
+- **Desktop:** sticky translucent paper header with a mono `PP / 26` brand mark, quiet route links, and a dark resume button.
 - **Mobile:** a square menu control reveals a stacked navigation panel with generous `44px` link targets and the resume action below.
 - **States:** links shift from muted slate to dark ink on hover; focus remains explicit and never relies on color alone.
 

@@ -28,7 +28,7 @@ Visitors scan the homepage on desktop or mobile, jump to experience and projects
 
 ## Capabilities and Constraints
 
-- Single-page anchor navigation: Home, About, Projects, Experience, Contact.
+- Shared portfolio shell with separate static routes: Overview, About, Projects, Experience, Contact.
 - Static-first, Vercel-compatible deployment with no database, authentication, analytics, or secret environment variables.
 - Resume PDF must be publicly downloadable.
 - Employer work must remain high-level and publicly shareable; no proprietary code, screenshots, customer data, or confidential architecture.
