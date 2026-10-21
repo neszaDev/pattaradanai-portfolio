@@ -77,7 +77,6 @@ export function HomePage() {
           <h1>Full-stack developer for real product work.</h1>
           <p className="home-hero__intro">I build and maintain web and mobile applications across frontend interfaces, backend APIs, databases, and deployment workflows.</p>
           <div className="hero-actions"><Link className="button button--accent" href="/projects">View selected work <ArrowRight size={16} aria-hidden="true" /></Link><Link className="button button--outline" href="/experience">See experience <ArrowUpRight size={16} aria-hidden="true" /></Link></div>
-          <div className="hero-facts" aria-label="Quick profile facts"><div><strong>First-Class Honors</strong><span>Computer Engineering</span></div><div><strong>GPA 3.69</strong><span>Mae Fah Luang University</span></div><div><strong>Bangkok, Thailand</strong><span>Open to early-career roles</span></div></div>
         </div>
         <WorkflowIllustration />
       </section>

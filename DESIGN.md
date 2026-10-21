@@ -83,7 +83,7 @@ The redesign replaces the old oversized editorial hero and dark workspace card w
 
 The shared shell is a centered `1200px` content column with `32px` desktop gutters and `16px` mobile gutters. The header is sticky and route-first. Desktop navigation shows Overview, About, Projects, Experience, and Contact. Mobile navigation collapses to a labelled menu button.
 
-The overview page leads with a concise two-column hero: statement and actions on the left, an honest workflow illustration on the right. Quick facts sit below the actions. Selected project cards, current experience, and a contact close follow in the same page so recruiters do not need to guess where proof lives.
+The overview page leads with a concise two-column hero: statement and actions on the left, an honest workflow illustration on the right. Education and location facts live on About, keeping the homepage focused on work and next actions. Selected project cards, current experience, and a contact close follow in the same page so recruiters do not need to guess where proof lives.
 
 Inner routes use a compact title band with a short description and factual scan rail. About combines narrative, a profile placeholder, education, working style, skills, and workflow. Projects use visual cards with contribution-first copy. Experience uses a timeline list. Contact uses one clear CTA and ruled contact rows.
 

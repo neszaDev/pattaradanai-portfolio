@@ -54,12 +54,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -.055em; }
 .home-hero h1 { max-width: 760px; font-size: clamp(3.1rem, 4.7vw, 4.8rem); line-height: .98; }
 .home-hero__intro { max-width: 590px; margin-top: 27px; color: var(--muted); font-size: clamp(1.05rem, 1.6vw, 1.2rem); line-height: 1.65; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-.hero-facts { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 66px; border-top: 1px solid var(--line); }
-.hero-facts > div { display: grid; gap: 5px; min-height: 86px; padding: 15px 16px 0 0; border-right: 1px solid var(--line); }
-.hero-facts > div + div { padding-left: 16px; }
-.hero-facts > div:last-child { border-right: 0; }
-.hero-facts strong { font-size: 13px; letter-spacing: -.02em; }
-.hero-facts span, .page-intro__facts span, .project-card__topline, .project-card__contribution > span, .about-note span, .skill-group h3, .experience-item__meta, .experience-summary span, .home-experience__role > span:first-child { color: var(--muted); font-family: var(--mono); font-size: 10px; line-height: 1.5; }
+.page-intro__facts span, .project-card__topline, .project-card__contribution > span, .about-note span, .skill-group h3, .experience-item__meta, .experience-summary span, .home-experience__role > span:first-child { color: var(--muted); font-family: var(--mono); font-size: 10px; line-height: 1.5; }
 
 .workflow-art { position: relative; overflow: hidden; margin: 0; padding: 22px 22px 18px; border: 1px solid #c8ddf5; border-radius: 20px; background: var(--sky); box-shadow: var(--shadow); }
 .workflow-art__topline { display: flex; justify-content: space-between; color: var(--blue-dark); font-family: var(--mono); font-size: 10px; letter-spacing: .02em; }
@@ -121,7 +116,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -.055em; }
 }
 
 @media (max-width: 760px) {
-  .shell { width: min(calc(100% - 40px), 1200px); }.desktop-navigation { display: none; }.mobile-menu-button { display: flex; }.mobile-navigation { display: grid; padding-inline: 20px; }.home-hero { padding-top: 58px; }.home-hero h1 { font-size: clamp(3rem, 11vw, 4.7rem); }.hero-facts, .experience-summary { grid-template-columns: 1fr; }.hero-facts > div, .hero-facts > div + div, .experience-summary > div, .experience-summary > div + div { min-height: 0; padding: 13px 0; border-right: 0; border-bottom: 1px solid var(--line); }.hero-facts > div:last-child, .experience-summary > div:last-child { border-bottom: 0; }.section-heading { grid-template-columns: 1fr; gap: 18px; }.section-heading h2, .home-experience h2, .home-cta h2, .about-story h2, .skills-layout h2, .contact-card h2 { font-size: clamp(2.35rem, 9vw, 3.7rem); }.page-intro { padding-top: 60px; }.page-intro h1 { font-size: clamp(2.9rem, 10vw, 4.6rem); }.page-intro__facts { padding-left: 14px; }.skills-grid { grid-template-columns: 1fr 1fr; }.experience-item { grid-template-columns: 1fr; gap: 18px; }.contact-layout { padding-top: 68px; }.home-cta, .resume-callout, .footer { align-items: flex-start; flex-direction: column; }.home-cta { gap: 24px; }.resume-callout { gap: 20px; }
+  .shell { width: min(calc(100% - 40px), 1200px); }.desktop-navigation { display: none; }.mobile-menu-button { display: flex; }.mobile-navigation { display: grid; padding-inline: 20px; }.home-hero { padding-top: 58px; }.home-hero h1 { font-size: clamp(3rem, 11vw, 4.7rem); }.experience-summary { grid-template-columns: 1fr; }.experience-summary > div, .experience-summary > div + div { min-height: 0; padding: 13px 0; border-right: 0; border-bottom: 1px solid var(--line); }.experience-summary > div:last-child { border-bottom: 0; }.section-heading { grid-template-columns: 1fr; gap: 18px; }.section-heading h2, .home-experience h2, .home-cta h2, .about-story h2, .skills-layout h2, .contact-card h2 { font-size: clamp(2.35rem, 9vw, 3.7rem); }.page-intro { padding-top: 60px; }.page-intro h1 { font-size: clamp(2.9rem, 10vw, 4.6rem); }.page-intro__facts { padding-left: 14px; }.skills-grid { grid-template-columns: 1fr 1fr; }.experience-item { grid-template-columns: 1fr; gap: 18px; }.contact-layout { padding-top: 68px; }.home-cta, .resume-callout, .footer { align-items: flex-start; flex-direction: column; }.home-cta { gap: 24px; }.resume-callout { gap: 20px; }
 }
 
 @media (max-width: 560px) {
