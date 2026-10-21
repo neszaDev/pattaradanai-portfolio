@@ -2,14 +2,16 @@
 name: Pattaradanai Prommanee Portfolio
 description: An editorial engineering archive for a practical full-stack developer.
 colors:
-  ink: "#10161f"
-  muted: "#5d6873"
-  line: "#d8dee4"
-  paper: "#f5f7f7"
-  paper-strong: "#edf1f2"
-  electric-blue: "#8ed7ff"
-  electric-blue-strong: "#1b75a8"
-  rust: "#b86543"
+  ink: "#10203a"
+  muted: "#61708a"
+  line: "#d9e4f1"
+  paper: "#f8fbff"
+  paper-strong: "#edf5ff"
+  electric-blue: "#2563eb"
+  electric-blue-strong: "#1d4ed8"
+  rust: "#c56a42"
+  blue-pale: "#eaf2ff"
+  surface: "#ffffff"
   status-green: "#49a66a"
   project-blue: "#e6f5fb"
   project-rust: "#f0e5de"
@@ -89,19 +91,19 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Editorial Engineering Archive"**
+**Creative North Star: "The Friendly Engineering Portfolio"**
 
-This is an Experience-mode portfolio: the work and the person should feel like an artifact being inspected, not a product funnel being optimized. The composition borrows from an editorial archive and an engineering notebook—large declarative headlines, quiet metadata, thin rules, compact tags, and generous paper around the evidence.
+This is an Experience-mode portfolio with a recruiter-friendly front door: the work and the person should be easy to understand in under a minute. The composition borrows from a light editorial portfolio and a product showcase—large declarative headlines, friendly blue surfaces, compact metadata, visual project placeholders, and clear routes to experience, projects, and contact.
 
-The visual system is restrained and practical. Soft paper and dark ink establish the field; electric blue is deliberately scarce and carries action, status, and small moments of emphasis; rust adds a single warmer counterpoint in project storytelling. Manrope gives the page a contemporary, humane reading voice, while IBM Plex Mono marks system labels, navigation, dates, stacks, and other evidence-like metadata.
+The visual system is bright, calm, and practical. Cool paper and dark ink establish the field; electric blue carries action and active navigation; rust adds a warmer project counterpoint. Rounded surfaces and soft shadows make the interface approachable without becoming decorative. Manrope gives the page a contemporary, humane reading voice, while IBM Plex Mono marks system labels, navigation, dates, stacks, and other evidence-like metadata.
 
 **Key Characteristics:**
 
-- Experience-mode portfolio with an editorial engineering archive composition
-- Warm-neutral paper field, dark ink, restrained electric-blue accent, and rust support
-- Oversized left hero with a quiet right identity rail
-- Thin rules, compact tags, three project cards, timeline experience, workflow strip, and contact close
-- Flat-by-default surfaces with responsive motion and visible keyboard focus
+- Experience-mode portfolio with a recruiter-friendly project showcase
+- Cool paper field, dark ink, clear electric-blue accent, and rust support
+- Oversized page titles with a quick-scan rail
+- Visual project placeholders, compact tags, timeline experience, workflow strip, and contact close
+- Soft rounded surfaces with responsive motion and visible keyboard focus
 
 ## Colors
 
@@ -126,6 +128,8 @@ The palette is paper-first and low-noise: dark ink carries hierarchy, cool paper
 - **Status Green** (`{colors.status-green}`): the small availability pulse only.
 - **Project Blue Wash** (`{colors.project-blue}`): the blue project-card surface.
 - **Project Rust Wash** (`{colors.project-rust}`): the rust project-card surface.
+- **Friendly Blue Wash** (`{colors.blue-pale}`): page-intro and home-hero surfaces.
+- **White Surface** (`{colors.surface}`): project cards, route guide, and controls.
 - **Workspace Surface** (`#15212c`): the illustrative engineering panel in the hero.
 - **Workspace Deep** (`#0d1720`): the terminal footer inside the engineering panel.
 - **Workspace Line** (`#2d3a45`): borders inside the dark engineering panel.
@@ -175,7 +179,7 @@ The system is flat by default. Depth comes from paper-tonal shifts, dark ink pan
 
 ## Shapes
 
-The form language is editorial and squared: buttons, cards, menu controls, and link treatments use sharp corners (`0px`) and visible one-pixel rules. Tags are the exception, using compact pill silhouettes (`999px`) to read as metadata rather than controls. Status indicators are circular, and focus rings are deliberately more visible than resting borders.
+The form language is friendly and structured: buttons, hero panels, project cards, and page intros use generous rounded corners (`18px`), soft shadows, and visible one-pixel rules. Tags remain compact pills (`999px`) to read as metadata rather than controls. Status indicators are circular, and focus rings are deliberately more visible than resting borders.
 
 ## Components
 

@@ -22,13 +22,13 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="shell flex h-20 items-center justify-between">
         <Link className="brand-mark" href="/" onClick={() => setOpen(false)} aria-label="Pattaradanai Prommanee home">
-          <span className="brand-mark__dot" />
+          <span className="brand-mark__dot" aria-hidden="true">p</span>
           <span>PP / 26</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {links.map((link) => (
-            <Link className={`nav-link ${pathname === link.href ? "nav-link--active" : ""}`} href={link.href} key={link.href}>
+            <Link className={`nav-link ${pathname === link.href ? "nav-link--active" : ""}`} href={link.href} key={link.href} aria-current={pathname === link.href ? "page" : undefined}>
               {link.label}
             </Link>
           ))}
@@ -52,7 +52,7 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-navigation" className="mobile-navigation md:hidden" aria-label="Mobile navigation">
           {links.map((link) => (
-            <Link className={pathname === link.href ? "mobile-navigation__active" : ""} href={link.href} key={link.href} onClick={() => setOpen(false)}>
+            <Link className={pathname === link.href ? "mobile-navigation__active" : ""} href={link.href} key={link.href} onClick={() => setOpen(false)} aria-current={pathname === link.href ? "page" : undefined}>
               {link.label}
             </Link>
           ))}

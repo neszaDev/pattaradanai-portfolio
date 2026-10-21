@@ -142,6 +142,7 @@ export function ProjectsPage() {
       <PageIntro title="Selected work, with the contribution made clear." description="A concise view of the systems and product work I have built or contributed to across web, backend, mobile, and deployment." asideTitle="Three useful signals" asideText="Look for ownership, the technical surface touched, and the workflow problem each project helped solve." />
       <section className="section section--projects">
         <div className="shell">
+          <div className="project-overview" aria-label="Project overview"><span>03 PROJECTS</span><span>WEB · BACKEND · MOBILE · CLOUD</span><span>OPEN FOR REVIEW</span></div>
           <SectionHeading title="Work with a reason behind it." description="Each project is described by the part I contributed, not by inflated outcomes." />
           <div className="project-grid">
             {projects.map((project) => <ProjectCard key={project.index} {...project} />)}
