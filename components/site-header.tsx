@@ -1,32 +1,35 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { profile } from "@/data/content";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", slug: "about" },
+  { label: "Projects", slug: "projects" },
+  { label: "Experience", slug: "experience" },
+  { label: "Contact", slug: "contact" },
 ];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="site-header">
       <div className="shell flex h-20 items-center justify-between">
-        <a className="brand-mark" href="#home" onClick={() => setOpen(false)} aria-label="Pattaradanai Prommanee home">
+        <Link className="brand-mark" href="/" onClick={() => setOpen(false)} aria-label="Pattaradanai Prommanee home">
           <span className="brand-mark__dot" />
           <span>PP / 26</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           {links.map((link) => (
-            <a className="nav-link" href={link.href} key={link.href}>
+            <Link className={`nav-link ${pathname === `/${link.slug}` ? "nav-link--active" : ""}`} href={`/${link.slug}`} key={link.slug}>
               {link.label}
-            </a>
+            </Link>
           ))}
           <a className="button button--small button--dark" href={profile.resumePath} download>
             Download resume
@@ -48,9 +51,9 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-navigation" className="mobile-navigation md:hidden" aria-label="Mobile navigation">
           {links.map((link) => (
-            <a href={link.href} key={link.href} onClick={() => setOpen(false)}>
+            <Link className={pathname === `/${link.slug}` ? "mobile-navigation__active" : ""} href={`/${link.slug}`} key={link.slug} onClick={() => setOpen(false)}>
               {link.label}
-            </a>
+            </Link>
           ))}
           <a className="button button--dark" href={profile.resumePath} download onClick={() => setOpen(false)}>
             Download resume

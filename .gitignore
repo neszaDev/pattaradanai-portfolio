@@ -3,6 +3,7 @@ node_modules/
 out/
 *.log
 .env*
+tmp/
 
 # Local source/reference documents; the public resume lives in /public.
 palakorn-main-routes-report.pdf

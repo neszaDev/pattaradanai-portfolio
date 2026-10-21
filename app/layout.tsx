@@ -6,7 +6,6 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: 
 const plexMono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"], display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pattaradanai.dev"),
   title: "Pattaradanai Prommanee — Full-Stack Developer",
   description: "Portfolio of Pattaradanai Prommanee, a full-stack developer working across web, mobile, APIs, databases, and deployment.",
   openGraph: {

@@ -126,6 +126,9 @@ The palette is paper-first and low-noise: dark ink carries hierarchy, cool paper
 - **Status Green** (`{colors.status-green}`): the small availability pulse only.
 - **Project Blue Wash** (`{colors.project-blue}`): the blue project-card surface.
 - **Project Rust Wash** (`{colors.project-rust}`): the rust project-card surface.
+- **Workspace Surface** (`#15212c`): the illustrative engineering panel in the hero.
+- **Workspace Deep** (`#0d1720`): the terminal footer inside the engineering panel.
+- **Workspace Line** (`#2d3a45`): borders inside the dark engineering panel.
 
 ### Named Rules
 
@@ -148,6 +151,7 @@ The palette is paper-first and low-noise: dark ink carries hierarchy, cool paper
 - **Title** (600, `clamp(1.7rem, 2.4vw, 2.45rem)`, 0.98): project names and experience roles.
 - **Body** (400, `1rem`, 1.6): explanatory copy, with narrower measures for comfortable scanning; ledes may step up in size for emphasis.
 - **Label** (500, `12px`, 1.4, `0.04em`): mono navigation, buttons, tags, dates, section eyebrows, and system metadata. Uppercase is reserved for short labels.
+- **Workspace micro-label** (400-500, `10px`): mono file names, language markers, and illustrative terminal status inside the hero panel.
 
 ### Named Rules
 
@@ -213,6 +217,10 @@ Seven numbered cells—Understand, Design, Implement, Test, Debug, Review, Deplo
 ### Contact Close
 
 Finish with a large Manrope invitation on the left and a ruled list of email, GitHub, location, and phone links on the right. Keep link rows at least `60px` high, use mono labels, and reserve blue for the trailing directional icon.
+
+### Engineering Workspace Panel
+
+The hero panel is an illustrative visual cue for the developer workflow, not a live build report. Keep its dark surface compact, use multiline code with readable contrast, and label status copy as a sample or verification reminder rather than implying a deployment has just run.
 
 ## Do's and Don'ts
 

@@ -9,6 +9,15 @@
   --blue: #8ed7ff;
   --blue-strong: #1b75a8;
   --rust: #b86543;
+  --workspace: #15212c;
+  --workspace-deep: #0d1720;
+  --workspace-bar: #1e2d39;
+  --workspace-line: #2d3a45;
+  --workspace-text: #dbe8ee;
+  --workspace-muted: #93a9b4;
+  --workspace-soft: #7d919c;
+  --workspace-code: #e5eef1;
+  --workspace-success: #a9d7b7;
   --sans: var(--font-sans), Arial, sans-serif;
   --mono: var(--font-mono), monospace;
 }
@@ -29,6 +38,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .brand-mark__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--blue-strong); box-shadow: 0 0 0 5px color-mix(in srgb, var(--blue) 52%, transparent); }
 .nav-link { color: var(--muted); font-size: 12px; transition: color .2s ease; }
 .nav-link:hover { color: var(--ink); }
+.nav-link--active { color: var(--ink); }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 18px; border: 1px solid var(--ink); font-size: 12px; font-weight: 500; transition: transform .2s ease, background .2s ease, color .2s ease; }
 .button:hover { transform: translateY(-2px); }
 .button--small { min-height: 38px; padding-inline: 14px; }
@@ -38,6 +48,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .mobile-menu-button { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--line); background: transparent; color: var(--ink); }
 .mobile-navigation { display: grid; gap: 18px; padding: 8px 24px 24px; border-bottom: 1px solid var(--line); background: var(--paper); }
 .mobile-navigation a:not(.button) { display: flex; align-items: center; min-height: 44px; font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.mobile-navigation__active { color: var(--ink) !important; }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1.42fr) minmax(280px, .58fr); gap: 10%; padding-top: clamp(96px, 14vw, 180px); padding-bottom: 96px; }
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 24px; color: var(--blue-strong); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
@@ -49,6 +60,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero__aside { display: flex; flex-direction: column; align-self: end; gap: 72px; padding-bottom: 5px; }
 .signal-line { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 11px; }
 .signal-line__pulse { width: 7px; height: 7px; border-radius: 50%; background: #49a66a; box-shadow: 0 0 0 4px #d6efdc; }
+.workspace-panel { overflow: hidden; border: 1px solid var(--workspace-line); background: var(--workspace); color: var(--workspace-text); box-shadow: 0 20px 38px rgba(16, 22, 31, .12); }
+.workspace-panel__bar, .workspace-panel__tab, .workspace-panel__terminal { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: var(--mono); font-size: 10px; }
+.workspace-panel__bar { padding: 11px 14px; background: var(--workspace-bar); color: var(--workspace-muted); }
+.workspace-panel__tab { padding: 10px 14px; border-bottom: 1px solid var(--workspace-line); color: var(--blue); }
+.workspace-panel__tab span:last-child { color: var(--workspace-soft); }
+.workspace-panel__code { overflow: auto; margin: 0; padding: 18px 14px; color: var(--workspace-code); font: 500 12px/1.65 var(--mono); }
+.workspace-panel__terminal { display: grid; justify-content: start; gap: 8px; padding: 13px 14px; background: var(--workspace-deep); color: var(--blue); }
+.workspace-panel__terminal strong { color: var(--workspace-success); font-size: 10px; font-weight: 400; }
 .hero__identity { display: grid; gap: 9px; border-top: 1px solid var(--line); padding-top: 16px; }
 .hero__identity-label { color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .hero__identity strong { font-size: 1.1rem; letter-spacing: -.02em; }
@@ -138,6 +157,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (max-width: 900px) {
   .hero, .section-heading, .about-grid, .skills-layout, .contact { grid-template-columns: 1fr; gap: 46px; }
   .hero__aside { gap: 35px; }
+  .workspace-panel { max-width: 560px; }
   .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 0; }
   .project-card__body { margin-top: 54px; }

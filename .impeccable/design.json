@@ -14,14 +14,24 @@
       "rust": { "role": "secondary", "displayName": "Rust Support", "canonical": "#b86543", "tonalRamp": ["#3b160d", "#5b2416", "#7e3823", "#9f4d32", "#b86543", "#cc8d72", "#e2b8a5", "#f5e8e2"] },
       "status-green": { "role": "tertiary", "displayName": "Status Green", "canonical": "#49a66a", "tonalRamp": ["#123821", "#1c5c33", "#2d7c49", "#49a66a", "#72c28b", "#a1d9b0", "#cfeedd", "#eefaf1"] },
       "project-blue": { "role": "secondary", "displayName": "Project Blue Wash", "canonical": "#e6f5fb", "tonalRamp": ["#00334d", "#005779", "#007da8", "#259fcb", "#55b9df", "#8ed7ff", "#c8edfb", "#e6f5fb"] },
-      "project-rust": { "role": "secondary", "displayName": "Project Rust Wash", "canonical": "#f0e5de", "tonalRamp": ["#3b160d", "#5b2416", "#7e3823", "#9f4d32", "#b86543", "#d7a48f", "#ead0c4", "#f0e5de"] }
+      "project-rust": { "role": "secondary", "displayName": "Project Rust Wash", "canonical": "#f0e5de", "tonalRamp": ["#3b160d", "#5b2416", "#7e3823", "#9f4d32", "#b86543", "#d7a48f", "#ead0c4", "#f0e5de"] },
+      "workspace": { "role": "neutral", "displayName": "Workspace Surface", "canonical": "#15212c" },
+      "workspace-deep": { "role": "neutral", "displayName": "Workspace Deep", "canonical": "#0d1720" },
+      "workspace-bar": { "role": "neutral", "displayName": "Workspace Bar", "canonical": "#1e2d39" },
+      "workspace-line": { "role": "neutral", "displayName": "Workspace Line", "canonical": "#2d3a45" },
+      "workspace-text": { "role": "neutral", "displayName": "Workspace Text", "canonical": "#dbe8ee" },
+      "workspace-muted": { "role": "neutral", "displayName": "Workspace Muted", "canonical": "#93a9b4" },
+      "workspace-soft": { "role": "neutral", "displayName": "Workspace Soft", "canonical": "#7d919c" },
+      "workspace-code": { "role": "neutral", "displayName": "Workspace Code", "canonical": "#e5eef1" },
+      "workspace-success": { "role": "tertiary", "displayName": "Workspace Success", "canonical": "#a9d7b7" }
     },
     "typographyMeta": {
       "display": { "displayName": "Manrope Display", "purpose": "Hero statement only; oversized, tight, and left-led." },
       "headline": { "displayName": "Manrope Headline", "purpose": "Section and contact titles." },
       "title": { "displayName": "Manrope Title", "purpose": "Project and experience titles." },
       "body": { "displayName": "Manrope Body", "purpose": "Readable descriptions and explanatory copy." },
-      "label": { "displayName": "IBM Plex Mono Label", "purpose": "Navigation, metadata, dates, tags, buttons, and evidence-like system labels." }
+      "label": { "displayName": "IBM Plex Mono Label", "purpose": "Navigation, metadata, dates, tags, buttons, and evidence-like system labels." },
+      "workspace-micro-label": { "displayName": "IBM Plex Mono Workspace", "purpose": "File names, language markers, and illustrative terminal status inside the hero panel." }
     },
     "shadows": [
       { "name": "project-hover", "value": "0 18px 36px rgba(16, 22, 31, 0.08)", "purpose": "Restrained hover lift for project cards only." }
