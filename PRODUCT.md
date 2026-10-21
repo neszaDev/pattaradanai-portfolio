@@ -39,7 +39,7 @@ Visitors scan the homepage on desktop or mobile, jump to experience and projects
 
 - Name: Pattaradanai Prommanee.
 - Voice: concise, honest, confident, and appropriate for an early-career engineer.
-- Visual brief: premium, minimal, modern, warm-neutral background, dark text, restrained electric-blue accent, generous whitespace, and subtle engineering details.
+- Visual brief: friendly product-showcase portfolio, white and cool-paper canvas, dark text, clear electric-blue actions, restrained rounded surfaces, honest visual placeholders, and obvious recruiter scan paths.
 
 ## Evidence on Hand
 
