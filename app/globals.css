@@ -70,7 +70,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -.055em; }
 
 .section { padding-block: clamp(86px, 10vw, 128px); }
 .section--featured { border-top: 1px solid var(--line); }
-.section-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .58fr); gap: 10%; align-items: end; margin-bottom: 42px; }
+.section-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .58fr); gap: 10%; align-items: start; margin-bottom: 42px; }
 .section-heading h2, .home-experience h2, .home-cta h2, .about-story h2, .skills-layout h2, .contact-card h2 { max-width: 650px; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1.02; }
 .section-heading p, .home-experience p, .home-cta p, .skills-layout > div:first-child p, .contact-card p { max-width: 420px; color: var(--muted); line-height: 1.7; }
 .section-link { display: flex; justify-content: flex-end; margin-top: 28px; }
