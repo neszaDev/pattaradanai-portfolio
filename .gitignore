@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+*.log
+.env*
+
+# Local source/reference documents; the public resume lives in /public.
+palakorn-main-routes-report.pdf
+Pattaradanai_Resume_2026.pdf
+
+# Impeccable decision artifacts are local working state.
+.impeccable/questions/
+.impeccable/review/
+.impeccable/mocks/

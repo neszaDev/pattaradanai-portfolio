@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T00:00:00+07:00",
+  "title": "Design System: Pattaradanai Prommanee Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Dark Ink", "canonical": "#10161f", "tonalRamp": ["#10161f", "#1b2732", "#2b3944", "#43515b", "#5d6873", "#89939a", "#b9c1c5", "#f5f7f7"] },
+      "muted": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#5d6873", "tonalRamp": ["#1c252d", "#2b3740", "#3e4b54", "#53616a", "#5d6873", "#8d989e", "#bcc4c8", "#eef1f2"] },
+      "line": { "role": "neutral", "displayName": "Rule Gray", "canonical": "#d8dee4", "tonalRamp": ["#252d33", "#414b52", "#68737a", "#9ba5aa", "#d8dee4", "#e2e7ea", "#edf1f2", "#f8f9f9"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f5f7f7", "tonalRamp": ["#20282e", "#3a444a", "#657076", "#969fa4", "#c2c9cc", "#dce1e3", "#edf1f2", "#f5f7f7"] },
+      "paper-strong": { "role": "neutral", "displayName": "Paper Strong", "canonical": "#edf1f2", "tonalRamp": ["#20282e", "#3a444a", "#657076", "#969fa4", "#c2c9cc", "#dce1e3", "#edf1f2", "#f8f9f9"] },
+      "electric-blue": { "role": "primary", "displayName": "Restrained Electric Blue", "canonical": "#8ed7ff", "tonalRamp": ["#00334d", "#005779", "#007da8", "#259fcb", "#55b9df", "#8ed7ff", "#b9e7ff", "#e7f7ff"] },
+      "electric-blue-strong": { "role": "primary", "displayName": "Deep Electric Blue", "canonical": "#1b75a8", "tonalRamp": ["#002b42", "#004866", "#00678e", "#1b75a8", "#4c99c4", "#7db8d8", "#b1d7e8", "#e5f5fb"] },
+      "rust": { "role": "secondary", "displayName": "Rust Support", "canonical": "#b86543", "tonalRamp": ["#3b160d", "#5b2416", "#7e3823", "#9f4d32", "#b86543", "#cc8d72", "#e2b8a5", "#f5e8e2"] },
+      "status-green": { "role": "tertiary", "displayName": "Status Green", "canonical": "#49a66a", "tonalRamp": ["#123821", "#1c5c33", "#2d7c49", "#49a66a", "#72c28b", "#a1d9b0", "#cfeedd", "#eefaf1"] },
+      "project-blue": { "role": "secondary", "displayName": "Project Blue Wash", "canonical": "#e6f5fb", "tonalRamp": ["#00334d", "#005779", "#007da8", "#259fcb", "#55b9df", "#8ed7ff", "#c8edfb", "#e6f5fb"] },
+      "project-rust": { "role": "secondary", "displayName": "Project Rust Wash", "canonical": "#f0e5de", "tonalRamp": ["#3b160d", "#5b2416", "#7e3823", "#9f4d32", "#b86543", "#d7a48f", "#ead0c4", "#f0e5de"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Manrope Display", "purpose": "Hero statement only; oversized, tight, and left-led." },
+      "headline": { "displayName": "Manrope Headline", "purpose": "Section and contact titles." },
+      "title": { "displayName": "Manrope Title", "purpose": "Project and experience titles." },
+      "body": { "displayName": "Manrope Body", "purpose": "Readable descriptions and explanatory copy." },
+      "label": { "displayName": "IBM Plex Mono Label", "purpose": "Navigation, metadata, dates, tags, buttons, and evidence-like system labels." }
+    },
+    "shadows": [
+      { "name": "project-hover", "value": "0 18px 36px rgba(16, 22, 31, 0.08)", "purpose": "Restrained hover lift for project cards only." }
+    ],
+    "motion": [
+      { "name": "state-transition", "value": "0.2s ease", "purpose": "Button, link, and navigation color/transform transitions." },
+      { "name": "card-transition", "value": "0.25s ease", "purpose": "Project-card hover lift and shadow response." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce; transition-duration: 0.01ms", "purpose": "Disable smooth scrolling and meaningful animation for motion-sensitive users." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px", "purpose": "Tight shell, stacked hero actions, single-column skills, two-column workflow." },
+      { "name": "nav", "value": "768px", "purpose": "Swap desktop navigation for the mobile menu button." },
+      { "name": "tablet", "value": "900px", "purpose": "Stack narrative columns, project cards, and compress the workflow strip." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "Primary call to action for viewing selected work.",
+      "html": "<button class=\"ds-btn-accent\">View selected work <span aria-hidden=\"true\">↘</span></button>",
+      "css": ".ds-btn-accent { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 0 18px; border: 1px solid #8ed7ff; border-radius: 0; background: #8ed7ff; color: #10161f; font: 500 12px/1.4 'IBM Plex Mono', monospace; cursor: pointer; transition: transform .2s ease, background .2s ease, color .2s ease; } .ds-btn-accent:hover { transform: translateY(-2px); background: #aee3ff; } .ds-btn-accent:focus-visible { outline: 3px solid #1b75a8; outline-offset: 4px; }"
+    },
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "High-contrast resume action used in the header and mobile navigation.",
+      "html": "<button class=\"ds-btn-dark\">Download resume</button>",
+      "css": ".ds-btn-dark { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border: 1px solid #10161f; border-radius: 0; background: #10161f; color: #f5f7f7; font: 500 12px/1.4 'IBM Plex Mono', monospace; cursor: pointer; transition: transform .2s ease, background .2s ease, color .2s ease; } .ds-btn-dark:hover { transform: translateY(-2px); background: #1b2732; } .ds-btn-dark:focus-visible { outline: 3px solid #1b75a8; outline-offset: 4px; }"
+    },
+    {
+      "name": "Archive Navigation",
+      "kind": "nav",
+      "refersTo": "button-dark",
+      "description": "Quiet mono anchor navigation inside the sticky paper header.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#about\">About</a><a href=\"#projects\">Projects</a><a href=\"#experience\">Experience</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 32px; } .ds-nav a { color: #5d6873; font: 400 12px/1.4 'IBM Plex Mono', monospace; text-decoration: none; transition: color .2s ease; } .ds-nav a:hover { color: #10161f; } .ds-nav a:focus-visible { outline: 3px solid #1b75a8; outline-offset: 4px; }"
+    },
+    {
+      "name": "Metadata Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Compact technology or metadata marker inside project and skill groups.",
+      "html": "<span class=\"ds-tag\">Next.js</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; min-height: 25px; padding: 0 9px; border: 1px solid #d8dee4; border-radius: 999px; background: transparent; color: #5d6873; font: 400 10px/1.4 'IBM Plex Mono', monospace; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Editorial project artifact with index, contribution, details, and stack evidence.",
+      "html": "<article class=\"ds-project-card\"><div class=\"ds-card-meta\"><span>01</span><span>Independent project</span></div><h3>Student Loan Application System</h3><p>A full-stack application for managing student loan applications.</p><span class=\"ds-card-label\">Contribution</span><p>Owned the application from schema design through deployment.</p><span class=\"ds-tag\">Vue.js</span></article>",
+      "css": ".ds-project-card { display: flex; min-height: 360px; flex-direction: column; padding: 23px; border: 1px solid #d8dee4; border-radius: 0; background: #f5f7f7; color: #10161f; transition: transform .25s ease, box-shadow .25s ease; } .ds-project-card:hover { transform: translateY(-5px); box-shadow: 0 18px 36px rgba(16, 22, 31, .08); } .ds-card-meta, .ds-card-label { color: #5d6873; font: 400 10px/1.4 'IBM Plex Mono', monospace; letter-spacing: .07em; text-transform: uppercase; } .ds-project-card h3 { max-width: 260px; margin: 84px 0 20px; font: 600 clamp(1.7rem, 2.4vw, 2.45rem)/.98 Manrope, Arial, sans-serif; letter-spacing: -.055em; } .ds-project-card p { max-width: 320px; margin: 0 0 20px; color: #5d6873; font: 400 .95rem/1.65 Manrope, Arial, sans-serif; } .ds-card-label { margin-top: auto; } .ds-project-card:focus-within { outline: 3px solid #1b75a8; outline-offset: 4px; }"
+    },
+    {
+      "name": "Workflow Step",
+      "kind": "custom",
+      "refersTo": "tag",
+      "description": "One cell in the numbered Understand-to-Deploy workflow strip.",
+      "html": "<div class=\"ds-workflow-step\"><span>01</span><strong>Understand</strong><span aria-hidden=\"true\">↗</span></div>",
+      "css": ".ds-workflow-step { display: grid; gap: 13px; align-content: space-between; min-height: 150px; padding: 16px; border-right: 1px solid #d8dee4; border-block: 1px solid #d8dee4; } .ds-workflow-step span { color: #5d6873; font: 400 10px/1.4 'IBM Plex Mono', monospace; } .ds-workflow-step strong { color: #10161f; font: 600 1.05rem/1.2 Manrope, Arial, sans-serif; letter-spacing: -.03em; } .ds-workflow-step > span:last-child { color: #1b75a8; font-size: 16px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Editorial Engineering Archive",
+    "overview": "This is an Experience-mode portfolio: the work and the person should feel like an artifact being inspected, not a product funnel being optimized. The composition borrows from an editorial archive and an engineering notebook—large declarative headlines, quiet metadata, thin rules, compact tags, and generous paper around the evidence.\n\nThe visual system is restrained and practical. Soft paper and dark ink establish the field; electric blue is deliberately scarce and carries action, status, and small moments of emphasis; rust adds a single warmer counterpoint in project storytelling. Manrope gives the page a contemporary, humane reading voice, while IBM Plex Mono marks system labels, navigation, dates, stacks, and other evidence-like metadata.",
+    "keyCharacteristics": [
+      "Experience-mode portfolio with an editorial engineering archive composition",
+      "Warm-neutral paper field, dark ink, restrained electric-blue accent, and rust support",
+      "Oversized left hero with a quiet right identity rail",
+      "Thin rules, compact tags, three project cards, timeline experience, workflow strip, and contact close",
+      "Flat-by-default surfaces with responsive motion and visible keyboard focus"
+    ],
+    "rules": [
+      { "name": "The Accent Scarcity Rule", "body": "Blue is a signal: reserve it for action, direction, status, selection, and readable emphasis. Do not turn the page into a blue brand field.", "section": "colors" },
+      { "name": "The System Label Rule", "body": "Use IBM Plex Mono for interface evidence—navigation, status, dates, stack tags, and labels—not for long-form reading.", "section": "typography" },
+      { "name": "The Flat Archive Rule", "body": "Let rules, tonal paper, and spacing create structure. Shadows appear only as a subtle interactive response on project cards.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let the artifact lead: use oversized left-led statements, quiet metadata, and generous paper around evidence.",
+      "Do use thin rules, tonal paper shifts, and whitespace to make hierarchy visible before adding decoration.",
+      "Do keep Manrope for display/body reading and IBM Plex Mono for concise system labels.",
+      "Do keep electric blue scarce and purposeful; use rust as a supporting project note.",
+      "Do preserve the responsive narrative: stack columns at `900px`, switch navigation at `768px`, and tighten the composition at `640px`.",
+      "Do provide semantic structure, descriptive link labels, keyboard-visible focus, accessible contrast, and reduced-motion support."
+    ],
+    "donts": [
+      "Don't introduce gradients, glassy cards, rounded panels, or decorative imagery that compete with the archive composition.",
+      "Don't turn tags into noisy controls or use mono for paragraphs and long-form copy.",
+      "Don't use the electric-blue accent as a full-page background or on every interactive element.",
+      "Don't hide keyboard focus, remove the sticky-header scroll offset, or depend on hover-only meaning.",
+      "Don't animate layout or scrolling when `prefers-reduced-motion: reduce` is active; transitions collapse to near-zero duration."
+    ]
+  }
+}
