@@ -21,30 +21,6 @@ export function PortfolioShell({ children }: PortfolioShellProps) {
   );
 }
 
-function WorkflowIllustration() {
-  return (
-    <figure className="workflow-art" aria-label="Illustrative software workflow placeholder">
-      <div className="workflow-art__topline"><span>Illustrative workflow</span><span>01 — 04</span></div>
-      <svg viewBox="0 0 620 430" aria-hidden="true">
-        <path className="workflow-art__path" d="M104 115h118v86h118v-86h118" />
-        <path className="workflow-art__path workflow-art__path--secondary" d="M222 287h118v-86h118v86h58" />
-        <circle className="workflow-art__node" cx="104" cy="115" r="24" />
-        <circle className="workflow-art__node workflow-art__node--blue" cx="222" cy="201" r="24" />
-        <circle className="workflow-art__node workflow-art__node--coral" cx="340" cy="115" r="24" />
-        <circle className="workflow-art__node workflow-art__node--green" cx="458" cy="201" r="24" />
-        <circle className="workflow-art__node workflow-art__node--blue" cx="222" cy="287" r="24" />
-        <circle className="workflow-art__node" cx="340" cy="201" r="24" />
-        <circle className="workflow-art__node workflow-art__node--coral" cx="458" cy="287" r="24" />
-        <circle className="workflow-art__node workflow-art__node--green" cx="516" cy="287" r="24" />
-        <g className="workflow-art__labels">
-          <text x="104" y="166">understand</text><text x="222" y="252">implement</text><text x="340" y="166">test</text><text x="458" y="252">review</text><text x="516" y="338">ship</text>
-        </g>
-      </svg>
-      <figcaption>From requirements to verified delivery.</figcaption>
-    </figure>
-  );
-}
-
 function PageIntro({ title, description, facts }: { title: string; description: string; facts: string[] }) {
   return (
     <section className="page-intro shell">
@@ -78,7 +54,6 @@ export function HomePage() {
           <p className="home-hero__intro">I build and maintain web and mobile applications across frontend interfaces, backend APIs, databases, and deployment workflows.</p>
           <div className="hero-actions"><Link className="button button--accent" href="/projects">View selected work <ArrowRight size={16} aria-hidden="true" /></Link><Link className="button button--outline" href="/experience">See experience <ArrowUpRight size={16} aria-hidden="true" /></Link></div>
         </div>
-        <WorkflowIllustration />
       </section>
 
       <section className="section section--featured shell" aria-labelledby="featured-title">
@@ -105,7 +80,7 @@ export function AboutPage() {
 }
 
 export function ProjectsPage() {
-  return <PortfolioShell><PageIntro title="Work with the contribution made clear." description="A concise view of systems and product work across web, backend, mobile, and deployment. No inflated outcomes, just the part I worked on." facts={["03 projects", "Web · API · mobile", "Visuals are placeholders"]} /><section className="section shell projects-section"><SectionHeading title="Three useful signals." description="Look for ownership, the technical surface touched, and the workflow problem each project helped solve." /><div className="project-grid">{projects.map((project) => <ProjectCard key={project.index} {...project} />)}</div><div className="section-link"><Link className="text-link" href="/experience">See the professional context <ArrowUpRight size={16} aria-hidden="true" /></Link></div></section></PortfolioShell>;
+  return <PortfolioShell><PageIntro title="Work with the contribution made clear." description="A concise view of systems and product work across web, backend, mobile, and deployment. Screenshots show the real project surfaces where they can be shared." facts={["03 projects", "Web · API · mobile", "Screenshots from real UIs"]} /><section className="section shell projects-section"><SectionHeading title="Systems, not mockups." description="Open a project to see the product surface, ownership, architecture, and the decisions behind the work." /><div className="project-grid">{projects.map((project) => <ProjectCard key={project.index} {...project} />)}</div><div className="section-link"><Link className="text-link" href="/experience">See the professional context <ArrowUpRight size={16} aria-hidden="true" /></Link></div></section></PortfolioShell>;
 }
 
 export function ExperiencePage() {

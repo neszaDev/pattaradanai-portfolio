@@ -31,7 +31,6 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <Link className="button button--small button--accent" href="/contact">Let’s talk</Link>
         </nav>
 
         <button
@@ -53,7 +52,6 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <Link className="button button--accent" href="/contact" onClick={() => setOpen(false)}>Let’s talk</Link>
         </nav>
       )}
     </header>

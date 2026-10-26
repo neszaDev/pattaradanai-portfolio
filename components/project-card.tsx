@@ -1,38 +1,27 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import type { Project } from "@/data/content";
 
-type ProjectCardProps = {
-  index: string;
-  title: string;
-  type: string;
-  description: string;
-  contribution: string;
-  details: string[];
-  stack: string[];
-  accent: string;
-};
+type ProjectCardProps = Pick<Project, "index" | "slug" | "title" | "type" | "description" | "contribution" | "details" | "stack" | "accent" | "thumbnail">;
 
-function ProjectVisual({ accent, title }: { accent: string; title: string }) {
-  return (
-    <div className={`project-card__visual project-card__visual--${accent}`} role="img" aria-label={`${title} visual placeholder`}>
-      <svg viewBox="0 0 520 250" aria-hidden="true">
-        {accent === "blue" ? <><rect className="visual-window" x="76" y="34" width="368" height="180" rx="16" /><rect className="visual-bar" x="100" y="59" width="82" height="10" rx="5" /><rect className="visual-line" x="100" y="93" width="214" height="13" rx="6" /><rect className="visual-line visual-line--short" x="100" y="119" width="144" height="10" rx="5" /><rect className="visual-accent" x="100" y="157" width="96" height="32" rx="10" /><rect className="visual-card" x="273" y="145" width="128" height="50" rx="12" /><circle className="visual-dot" cx="405" cy="70" r="9" /></> : null}
-        {accent === "ink" ? <><rect className="visual-window" x="54" y="42" width="412" height="166" rx="16" /><rect className="visual-sidebar" x="54" y="42" width="76" height="166" rx="16" /><rect className="visual-bar" x="154" y="67" width="126" height="11" rx="5" /><rect className="visual-card" x="154" y="98" width="126" height="67" rx="12" /><rect className="visual-card visual-card--alt" x="300" y="98" width="138" height="67" rx="12" /><path className="visual-path" d="M178 145h76m68-23h78m-78 23h52" /><circle className="visual-dot" cx="94" cy="74" r="9" /></> : null}
-        {accent === "rust" ? <><rect className="visual-phone" x="188" y="24" width="144" height="202" rx="24" /><rect className="visual-card" x="207" y="56" width="106" height="48" rx="12" /><rect className="visual-line" x="207" y="125" width="80" height="11" rx="5" /><rect className="visual-line visual-line--short" x="207" y="148" width="58" height="9" rx="4" /><circle className="visual-accent" cx="282" cy="187" r="18" /><path className="visual-path" d="M118 83h40m-40 30h22m214 0h48" /></> : null}
-      </svg>
-      <span className="project-card__visual-label">Visual placeholder / {accent === "blue" ? "web app" : accent === "ink" ? "platform" : "mobile flow"}</span>
-    </div>
-  );
+function ProjectVisual({ thumbnail, title, accent }: Pick<ProjectCardProps, "thumbnail" | "title" | "accent">) {
+  if (thumbnail) {
+    return <div className={`project-card__visual project-card__visual--${accent}`}>
+      <Image className="project-card__screenshot" src={thumbnail} alt={`${title} screenshot`} fill sizes="(max-width: 560px) 100vw, (max-width: 980px) 50vw, 33vw" />
+    </div>;
+  }
+
+  return <div className="project-card__visual project-card__visual--empty" role="img" aria-label={`${title}: no public screenshot available`}><span>No public screenshot available</span></div>;
 }
 
-export function ProjectCard({ index, title, type, description, contribution, details, stack, accent }: ProjectCardProps) {
-  return (
-    <article className={`project-card project-card--${accent}`}>
-      <div className="project-card__topline"><span>{index}</span><span>{type}</span></div>
-      <ProjectVisual accent={accent} title={title} />
-      <div className="project-card__body"><div><h3>{title}</h3><p className="project-card__description">{description}</p></div><ArrowUpRight className="project-card__arrow" aria-hidden="true" size={22} /></div>
-      <div className="project-card__contribution"><span>Contribution</span><p>{contribution}</p></div>
-      <ul className="project-card__details">{details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-      <div className="tag-list" aria-label={`${title} technology stack`}>{stack.map((item) => <span className="tag" key={item}>{item}</span>)}</div>
-    </article>
-  );
+export function ProjectCard({ index, slug, title, type, description, contribution, details, stack, accent, thumbnail }: ProjectCardProps) {
+  return <article className={`project-card project-card--${accent}`}>
+    <div className="project-card__topline"><span>{index}</span><span>{type}</span></div>
+    <ProjectVisual accent={accent} thumbnail={thumbnail} title={title} />
+    <div className="project-card__body"><div><h3><Link href={`/project/${slug}`}>{title}</Link></h3><p className="project-card__description">{description}</p></div><Link href={`/project/${slug}`} aria-label={`Read case study: ${title}`}><ArrowUpRight className="project-card__arrow" aria-hidden="true" size={22} /></Link></div>
+    <div className="project-card__contribution"><span>Contribution</span><p>{contribution}</p></div>
+    <ul className="project-card__details">{details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+    <div className="tag-list" aria-label={`${title} technology stack`}>{stack.map((item) => <span className="tag" key={item}>{item}</span>)}</div>
+  </article>;
 }
