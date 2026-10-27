@@ -1,25 +1,38 @@
-import type { Metadata } from "next";
-import { IBM_Plex_Mono, Manrope } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/ui";
+import { profile, siteUrl } from "@/data/content";
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-const plexMono = IBM_Plex_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"], display: "swap" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta", display: "swap" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
+
+const description = "Full-stack developer in Bangkok building web, mobile, and API features end to end. Projects, case studies, and experience.";
 
 export const metadata: Metadata = {
-  title: "Pattaradanai Prommanee — Full-Stack Developer",
-  description: "Portfolio of Pattaradanai Prommanee, a full-stack developer working across web, mobile, APIs, databases, and deployment.",
-  openGraph: {
-    title: "Pattaradanai Prommanee — Full-Stack Developer",
-    description: "Web and mobile engineering across frontend, backend, data, and deployment.",
-    type: "website",
-  },
-  icons: { icon: "/icon.svg" },
+  metadataBase: new URL(siteUrl),
+  title: { default: `${profile.name}, full-stack developer`, template: `%s · ${profile.name}` },
+  description,
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", siteName: profile.name, title: `${profile.name}, full-stack developer`, description, url: "/" },
+  twitter: { card: "summary_large_image" },
+  authors: [{ name: profile.name, url: profile.github }],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#fafafa",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${manrope.variable} ${plexMono.variable}`}>{children}</body>
+    <html lang="en" className={`${jakarta.variable} ${mono.variable}`}>
+      <body>
+        <a className="skip-link" href="#content">Skip to content</a>
+        <SiteHeader />
+        <main id="content" className="wrap page">{children}</main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

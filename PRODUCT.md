@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-delegated: Next.js App Router, TypeScript, Tailwind CSS, Lucide icons, and Vercel-compatible static-first deployment, as specified in the build brief.
+Next.js App Router, TypeScript, one plain CSS file, Lucide icons; fully static, deployed on Vercel Hobby.
 
 ## Users
 
@@ -24,14 +24,14 @@ A practical early-career engineering portfolio grounded in real product work acr
 
 ## Operating Context
 
-Visitors scan the homepage on desktop or mobile, jump to experience and projects, inspect technical skills, download a resume, and use email or GitHub to continue the conversation.
+Visitors scan the homepage on desktop or mobile, open one or two case studies, check experience and tools, download the résumé, and use email or GitHub to continue the conversation.
 
 ## Capabilities and Constraints
 
-- Shared portfolio shell with separate static routes: Overview, About, Projects, Experience, Contact.
+- Static routes: Home, Projects, a case study per project (`/projects/[slug]`), Experience, About, Contact.
 - Static-first, Vercel-compatible deployment with no database, authentication, analytics, or secret environment variables.
 - Resume PDF must be publicly downloadable.
-- Employer work must remain high-level and publicly shareable; no proprietary code, screenshots, customer data, or confidential architecture.
+- Employer work (AnyVet, iPassion) appears as job title, company, and dates only. No company projects, systems, code, or screenshots (owner decision, 2026-10-26).
 - Claims, dates, qualifications, URLs, and project details must come from supplied evidence.
 - No blog route or navigation item.
 
@@ -39,14 +39,16 @@ Visitors scan the homepage on desktop or mobile, jump to experience and projects
 
 - Name: Pattaradanai Prommanee.
 - Voice: concise, honest, confident, and appropriate for an early-career engineer.
-- Visual brief: friendly product-showcase portfolio, white and cool-paper canvas, dark text, clear electric-blue actions, restrained rounded surfaces, honest visual placeholders, and obvious recruiter scan paths.
+- Visual style: dark product-launch look (see DESIGN.md). Each project states its stack, status, and which part Pattaradanai built.
 
 ## Evidence on Hand
 
 - Pattaradanai_Resume_2026.pdf: authoritative resume for education, GPA, honors, experience, dates, skills, and contact details.
 - User-provided build brief and personal context: approved portfolio content and constraints.
 - palakorn-main-routes-report.pdf: unrelated reference material; do not reuse its person, routes, claims, or copy.
-- No verified public project repository or live-demo URL was supplied for the student loan system.
+- Project repositories reviewed for case studies: aureon-crm-web and aureon-crm-api (public, feat/crm branches), the Jaiyen HR web app (local copy; API private), spring-postgres-boilerplate, nextjs-boilerplate, flutter-boilerplate, thaiD-face-auth-wifi and the private team senior_project history.
+- No project is deployed; there are no live-demo URLs.
+- No source exists for the student loan system; it is described from the résumé and one screenshot.
 
 ## Product Principles
 

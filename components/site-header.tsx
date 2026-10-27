@@ -1,59 +1,39 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { profile } from "@/data/content";
 
 const links = [
-  { label: "Overview", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
-  { label: "Experience", href: "/experience" },
-  { label: "Contact", href: "/contact" },
+  { label: "home", href: "/" },
+  { label: "projects", href: "/projects" },
+  { label: "experience", href: "/experience" },
+  { label: "about", href: "/about" },
+  { label: "contact", href: "/contact" },
 ];
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
   return (
-    <header className="site-header">
-      <div className="shell site-header__inner">
-        <Link className="brand-mark" href="/" onClick={() => setOpen(false)} aria-label="Pattaradanai Prommanee home">
-          <span className="brand-mark__dot" aria-hidden="true">p</span>
-          <span>Pattaradanai</span>
+    <header className="header">
+      <div className="wrap header__inner">
+        <Link className="brand" href="/">
+          <span className="dot dot--ring dot--pulse" aria-hidden="true" />
+          <span aria-hidden="true">&gt;_</span>
+          <span>pattaradanai</span>
+          <span className="brand__role">{"//"} full-stack developer</span>
         </Link>
-
-        <nav className="desktop-navigation" aria-label="Primary navigation">
-          {links.map((link) => (
-            <Link className={`nav-link ${pathname === link.href ? "nav-link--active" : ""}`} href={link.href} key={link.href} aria-current={pathname === link.href ? "page" : undefined}>
-              {link.label}
-            </Link>
-          ))}
+        <nav className="nav" aria-label="Main">
+          {links.map((link) => {
+            const current = link.href === "/" ? pathname === "/" : pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return <Link key={link.href} href={link.href} aria-current={current ? "page" : undefined}>{link.label}</Link>;
+          })}
         </nav>
-
-        <button
-          className="mobile-menu-button"
-          type="button"
-          aria-expanded={open}
-          aria-controls="mobile-navigation"
-          aria-label={open ? "Close navigation" : "Open navigation"}
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <a className="cv" href={profile.resumePath} download>
+          <span className="dot dot--sm" aria-hidden="true" />Resume<ArrowUpRight size={14} aria-hidden="true" />
+        </a>
       </div>
-
-      {open && (
-        <nav id="mobile-navigation" className="mobile-navigation" aria-label="Mobile navigation">
-          {links.map((link) => (
-            <Link className={pathname === link.href ? "mobile-navigation__active" : ""} href={link.href} key={link.href} onClick={() => setOpen(false)} aria-current={pathname === link.href ? "page" : undefined}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }
