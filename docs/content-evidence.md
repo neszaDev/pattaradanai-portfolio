@@ -6,7 +6,7 @@ Where every public claim in `data/content.ts` comes from, checked on 2026-10-26.
 - **Interpretation**: a cautious reading of the evidence, worded on the site so it does not overclaim.
 - **Unknown**: not stated on the site.
 
-Employer work (AnyVet, iPassion) is limited to title, company, and dates by the owner's decision. Company repositories (AnyVet, PIMS, HRMS) were not used.
+Employer roles (AnyVet, iPassion) list the highlights from the published résumé, by the owner's decision (2026-10-29). Company repositories (AnyVet, PIMS, HRMS) were not used.
 
 ## Aureon CRM
 

@@ -1,4 +1,4 @@
-import { Download, IdCard, Mail, MapPin } from "lucide-react";
+import { CheckCircle2, Download, IdCard, Mail, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function ExperiencePage() {
         <div className="intro__row">
           <div className="intro" style={{ gap: 8, maxWidth: 720 }}>
             <h1 className="h-lg">Experience & career history</h1>
-            <p className="muted">Work I do for employers stays with them, so it isn’t described here. The projects on this site are my own.</p>
+            <p className="muted">What I worked on in each role, as on my résumé. Employer code and screens stay with the employer; the case studies on this site are my own projects.</p>
           </div>
           <div className="actions">
             <a className="btn btn--primary" href={profile.resumePath} download><Download size={16} aria-hidden="true" />Download résumé (PDF)</a>
@@ -74,12 +74,9 @@ export default function ExperiencePage() {
                 <span className="mono" style={{ fontWeight: 600, color: "var(--fg-2)" }}>{role.company}</span>
               </div>
               <span className="role__meta"><MapPin size={14} aria-hidden="true" />{role.location}</span>
-              {role.summary && (
-                <div className="inset inset--ok cluster" style={{ alignItems: "flex-start", flexWrap: "nowrap" }}>
-                  <span className="badge badge--ok" style={{ background: "var(--ok)", color: "#fff", borderColor: "var(--ok)" }}>Built</span>
-                  <p className="body-sm" style={{ color: "var(--fg)" }}>{role.summary}</p>
-                </div>
-              )}
+              <ul className="checks">
+                {role.highlights.map((item) => <li key={item}><CheckCircle2 size={16} aria-hidden="true" />{item}</li>)}
+              </ul>
               {role.href && <Link className="link mono" style={{ fontSize: 13 }} href={role.href}>See the project →</Link>}
             </li>
           ))}

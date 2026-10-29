@@ -31,7 +31,7 @@ Visitors scan the homepage on desktop or mobile, open one or two case studies, c
 - Static routes: Home, Projects, a case study per project (`/projects/[slug]`), Experience, About, Contact.
 - Static-first, Vercel-compatible deployment with no database, authentication, analytics, or secret environment variables.
 - Resume PDF must be publicly downloadable.
-- Employer work (AnyVet, iPassion) appears as job title, company, and dates only. No company projects, systems, code, or screenshots (owner decision, 2026-10-26).
+- Employer roles (AnyVet, iPassion) show title, company, dates, and the highlights from the published résumé (owner decision, 2026-10-29). No company case studies, code, or screenshots (owner decision, 2026-10-26).
 - Claims, dates, qualifications, URLs, and project details must come from supplied evidence.
 - No blog route or navigation item.
 

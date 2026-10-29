@@ -293,17 +293,49 @@ export const projects: Project[] = [
   },
 ];
 
-// Employer work stays with the employer: title, company, and dates only, by the owner's decision.
-export const experience: { period: string; role: string; company: string; location: string; employer: boolean; summary?: string; href?: string }[] = [
-  { period: "Apr 2026 – present", role: "Full-Stack Developer", company: "AnyVet", location: "Bangkok", employer: true },
-  { period: "Jan – Apr 2026", role: "Full-Stack Developer Intern", company: "iPassion", location: "Bangkok", employer: true },
+// Role highlights are taken from the published résumé. Employer systems get no case studies, screenshots, or code here.
+export const experience: { period: string; role: string; company: string; location: string; employer: boolean; highlights: string[]; href?: string }[] = [
+  {
+    period: "Apr 2026 – present",
+    role: "Full-Stack Developer",
+    company: "AnyVet",
+    location: "Bangkok",
+    employer: true,
+    highlights: [
+      "Delivered features across AnyVet’s veterinary platform, from stock, purchasing, and POS/tax to subscriptions, reporting, and clinical workflows.",
+      "Implemented backend APIs and business rules for search and pagination, VAT, stock availability, purchase-order history, and subscription grace periods.",
+      "Built Next.js and React interfaces with reusable forms, tables, and modals, aligning UI behaviour with API contracts and staff workflows.",
+      "Improved security and data handling through role-based access, hospital-wide 2FA, privacy-by-default consent, and safer credential submission.",
+      "Worked across web and API codebases to trace issues end to end, fix data-integrity gaps, and ship reliable changes for clinic teams.",
+      "Contributed CI and dependency security fixes, including high-severity vulnerability remediation.",
+    ],
+  },
+  {
+    period: "Jan – Apr 2026",
+    role: "Full-Stack Developer Intern",
+    company: "iPassion Co., Ltd.",
+    location: "Bangkok",
+    employer: true,
+    highlights: [
+      "Developed and maintained an HR management system supporting attendance, overtime, leave, and financial requests.",
+      "Built Flutter mobile apps for employee self-service and attendance tracking.",
+      "Developed web applications with Next.js, React, and Tailwind CSS for internal operations.",
+      "Implemented RESTful APIs in Spring Boot, including authentication, business logic, and database integration.",
+      "Took part in testing, bug fixing, and deployment.",
+    ],
+  },
   {
     period: "Part-time, during university",
     role: "Developer",
     company: "Mae Fah Luang University",
     location: "Chiang Rai",
     employer: false,
-    summary: "Built the university's Student Loan Fund application system: schema, application, document uploads, and deployment with Docker and Nginx.",
+    highlights: [
+      "Developed the university's Student Loan Fund application system with Vue.js, Node.js, MySQL, and Docker.",
+      "Implemented secure data handling and document uploads.",
+      "Designed the database schema for loan and user data.",
+      "Deployed the system with Docker behind Nginx.",
+    ],
     href: "/projects/student-loan-application-system",
   },
 ];
